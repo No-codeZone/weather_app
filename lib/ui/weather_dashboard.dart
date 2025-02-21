@@ -26,8 +26,7 @@ class _WeatherDashboardState extends State<WeatherDashboard> {
     if (place == null) return;
 
     debugPrint("Place\t$place");
-    final url = "https://api.openweathermap.org/data/2.5/weather?q=$place&units=metric&appid=7c125b929561beb9e6518471acd27d5f";
-
+    final url = "API_KEY/weather?q=$place&units=metric&appid";
     try {
       final response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
